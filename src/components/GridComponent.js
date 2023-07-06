@@ -3,7 +3,7 @@ import Ship from './Ship';
 import DropZone from './DropZone';
 import "../CSS/Grid.css";
 
-const GridComponent = ({cells, setCells, ships, memory, setShips, setDisabled, grid, setGrid}) => {
+const GridComponent = ({cells, setCells, ships, memory, game, setShips, setDisabled, grid, setGrid, setComputerGrid, gridPlayerTwo, addGridToGame}) => {
 
     const [cellsCovered, setCellsCovered] = useState(null);
     const [shipPositions, setShipPositions] = useState(memory.shipPositions);
@@ -134,6 +134,8 @@ const GridComponent = ({cells, setCells, ships, memory, setShips, setDisabled, g
             alert('ships are overlapping >:(')
             setDisabled(true);
         }
+        setComputerGrid();
+        addGridToGame(gridPlayerTwo);
     }
 
     const editCells = () => {

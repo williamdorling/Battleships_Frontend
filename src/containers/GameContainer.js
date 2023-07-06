@@ -204,15 +204,6 @@ const GameContainer = ({
     return [upperCell, lowerCell];
   };
 
-
-  // const handleComputerTurn = () => {
-  //   const random = Math.floor(Math.random() * cellsGridPlayerOne.length);
-  //   const targetCell = cellsGridPlayerOne[random];
-  //   setTimeout(() => {
-  //     handleTurn(targetCell);
-  //   }, 1000);
-  // };
-
   const getNearbyCells = (cell) => {
     const xCoordinate = cell.xCoordinate;
     const yCoordinate = cell.yCoordinate;

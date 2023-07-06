@@ -31,22 +31,10 @@ const GameContainer = ({
   const [availableCells, setAvailableCells] = useState([]);
   const [gameFinished, setGameFinished] = useState(false);
 
-  const [newPlayer, setNewPlayer] = useState("");
-  const [nearbyCells, setNearbyCells] = useState([]);
-  const [lastShotShipFirstHit, setLastShotShipFirstHit] = useState([]);
-  const [lastShotShipSecondHit, setLastShotShipSecondHit] = useState([]);
-  const [switchDirection, setSwitchDirection] = useState([]);
   const [hitCellsNotSunk, setHitCellsNotSunk] = useState([]);
   const [targetCells, setTargetCells] = useState([]);
   const [targetShip, setTargetShip] = useState({});
 
-  // const handleNameChange = (event) => {
-  //     setNewPlayer(event.target.value);
-  // }
-
-  // const mapShips = () => {
-  //     // map ships here after
-  // }
 
   useEffect(() => {
     setGameFinished(!gameFinished);
@@ -97,10 +85,6 @@ const GameContainer = ({
     const data = await response.json();
     setGame(data);
   };
-
-  //   const handleStartGameButton = () => {
-  //     setGameStarted(true);
-  //   };
 
 
   const handleComputerTurn = async () =>{
